@@ -9,6 +9,9 @@
   "name":"[Lcom.sun.management.internal.DiagnosticCommandInfo;"
 },
 {
+  "name":"[Ljava.lang.String;"
+},
+{
   "name":"com.sun.glass.ui.Cursor",
   "methods":[
     {"name":"getNativeCursor","parameterTypes":[] }, 

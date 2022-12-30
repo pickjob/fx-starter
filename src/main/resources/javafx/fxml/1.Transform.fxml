@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+
+<HBox fx:controller="fx.starter.controller.TransformController"
+      xmlns:fx="http://javafx.com/fxml">
+    <TextArea fx:id="srcText" promptText="Put Your Original String Here" HBox.hgrow="ALWAYS"/>
+    <VBox styleClass="middle-region">
+        <ComboBox fx:id="transType"/>
+        <Button text="transform" onMouseClicked="#transform"/>
+        <Button text="reverse" onMouseClicked="#reverse"/>
+    </VBox>
+    <TextArea fx:id="destText" editable="false" HBox.hgrow="ALWAYS"/>
+    <stylesheets>
+        <URL value="@../css/transform.css"/>
+    </stylesheets>
+</HBox>

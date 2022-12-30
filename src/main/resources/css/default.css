@@ -1,0 +1,9 @@
+@import "fonts.css";
+@import "color.css";
+
+.root {
+    -fx-background-color: -fx-color-background;
+    -fx-font-family: "Fira Code SemiBold";
+    -fx-font-size: 18px;
+    -fx-spacing: 18px;
+}

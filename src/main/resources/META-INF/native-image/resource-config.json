@@ -23,6 +23,9 @@
       "pattern":"\\Qhello_world/hello_world.css\\E"
     }, 
     {
+      "pattern":"\\Qjavafx/fxml/1.Transform.fxml\\E"
+    }, 
+    {
       "pattern":"\\Qlog4j2.xml\\E"
     }, 
     {
@@ -40,6 +43,14 @@
     }, 
     {
       "name":"com/sun/glass/ui/win/themes",
+      "locales":[
+        "", 
+        "und", 
+        "zh-CN"
+      ]
+    }, 
+    {
+      "name":"com/sun/javafx/scene/control/skin/resources/controls",
       "locales":[
         "", 
         "und", 

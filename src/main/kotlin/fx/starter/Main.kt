@@ -1,6 +1,7 @@
 package fx.starter
 
 import fx.starter.application.HelloWorldApplication
+import fx.starter.application.JavaFxApplication
 import javafx.application.Application
 
 /**
@@ -17,5 +18,6 @@ import javafx.application.Application
  *
  */
 fun main(args: Array<String>) {
-    Application.launch(HelloWorldApplication::class.java, *args)
+//    Application.launch(HelloWorldApplication::class.java, *args)
+    Application.launch(JavaFxApplication::class.java, *args)
 }
