@@ -16,3 +16,7 @@
    -fx-alignment: center;
    -fx-spacing: 40px;
 }
+
+.combo-box .list-cell {
+    -fx-alignment: center;
+}
