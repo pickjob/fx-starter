@@ -1,6 +1,5 @@
 package fx.starter
 
-import fx.starter.application.HelloWorldApplication
 import fx.starter.application.JavaFxApplication
 import javafx.application.Application
 
@@ -12,10 +11,10 @@ import javafx.application.Application
  *      javafx.scene.Scene: 场景, 容器
  *      javafx.scene.Node: 控件元素
  *          javafx.scene.Parent
- *              javafx.scene.layout.Regon
- *                  javafx.scene.control.Control
- *                  javafx.scene.layout.Pane
- *
+ *              javafx.scene.layout.Region
+ *                  javafx.scene.control.Control: 控件
+ *                  javafx.scene.layout.Pane: 布局
+ *          javafx.scene.shape.Shape: 图形
  */
 fun main(args: Array<String>) {
 //    Application.launch(HelloWorldApplication::class.java, *args)

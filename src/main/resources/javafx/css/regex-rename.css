@@ -1,0 +1,16 @@
+.root {
+    -fx-background-color: -default-color-background;
+    -fx-spacing: 10px;
+}
+
+.top {
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+.main-center {
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}

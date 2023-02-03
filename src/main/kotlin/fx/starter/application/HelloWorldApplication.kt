@@ -1,7 +1,6 @@
 package fx.starter.application
 
-import fx.starter.scene.codingScene
-import fx.starter.scene.fxmlScene
+import fx.starter.scene.createCodingScene
 import javafx.application.Application
 import javafx.stage.Stage
 import mu.KotlinLogging
@@ -13,9 +12,9 @@ class HelloWorldApplication: Application() {
     override fun start(stage: Stage) {
         stage.title = "Hello JavaFX"
         // coding
-        stage.scene = codingScene()
+        stage.scene = createCodingScene()
         // fxml
-        // stage.scene = fxmlScene()
+        // stage.scene = createFxmlScene()
         stage.show()
         logger.info("JavaFx is running ...")
     }

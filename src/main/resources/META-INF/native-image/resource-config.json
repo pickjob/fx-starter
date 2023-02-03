@@ -20,16 +20,28 @@
       "pattern":"\\QMETA-INF/services/org.slf4j.spi.SLF4JServiceProvider\\E"
     }, 
     {
+      "pattern":"\\Qcss/default.css\\E"
+    }, 
+    {
+      "pattern":"\\Qcss/theme.css\\E"
+    }, 
+    {
       "pattern":"\\Qhello_world/hello_world.css\\E"
     }, 
     {
       "pattern":"\\Qjavafx/fxml/1.Transform.fxml\\E"
     }, 
     {
+      "pattern":"\\Qjavafx/fxml/2.RegexRename.fxml\\E"
+    }, 
+    {
       "pattern":"\\Qlog4j2.xml\\E"
     }, 
     {
       "pattern":"\\Qlogback.xml\\E"
+    }, 
+    {
+      "pattern":"\\Qshowcase/showcase.css\\E"
     }
   ]},
   "bundles":[
@@ -55,6 +67,13 @@
         "", 
         "und", 
         "zh-CN"
+      ]
+    }, 
+    {
+      "name":"com/sun/javafx/scene/control/skin/resources/controls-nt",
+      "locales":[
+        "", 
+        "und"
       ]
     }
   ]

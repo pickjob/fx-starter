@@ -1,0 +1,31 @@
+// @import "../css/theme.css";
+
+.section {
+    -fx-spacing: 5px;
+    -fx-alignment: center;
+}
+
+.section-content {
+    -fx-spacing: 5px;
+    -fx-alignment: center;
+}
+
+.rectangle-a {
+    -fx-fill: red;
+    -fx-opacity: 0.5;
+}
+
+.rectangle-b {
+    -fx-fill: yellow;
+    -fx-opacity: 0.5;
+}
+
+.rectangle-c {
+    -fx-fill: green;
+    -fx-opacity: 0.5;
+}
+
+.rectangle-d {
+    -fx-fill: blue;
+    -fx-opacity: 0.2;
+}

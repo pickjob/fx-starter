@@ -8,7 +8,8 @@
 <?import java.net.URL?>
 
 <HBox fx:controller="fx.starter.controller.TransformController"
-      xmlns:fx="http://javafx.com/fxml">
+      xmlns:fx="http://javafx.com/fxml"
+      styleClass="root">
     <TextArea fx:id="srcText" promptText="Put Your Original String Here" HBox.hgrow="ALWAYS"/>
     <VBox styleClass="middle-region">
         <ComboBox fx:id="transType"/>

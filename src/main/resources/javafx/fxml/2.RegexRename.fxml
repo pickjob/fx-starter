@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<VBox fx:controller="fx.starter.controller.RegexRenameController"
+      xmlns:fx="http://javafx.com/fxml"
+      styleClass="root">
+    <HBox styleClass="top">
+        <Label text="Directory:"/>
+        <TextField fx:id="rootDirectory" promptText="Please click right button to start!" disable="true" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="chooseDirectoryBtn" text="..."/>
+    </HBox>
+    <HBox styleClass="main" VBox.vgrow="ALWAYS">
+        <ListView fx:id="filteredList" HBox.hgrow="ALWAYS"/>
+        <VBox styleClass="main-center" HBox.hgrow="ALWAYS">
+            <Label text="Filter Regex" labelFor="$filterRegex"/>
+            <TextArea fx:id="filterRegex" promptText="Regex used to filter" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="filterBtn" text="Filter Files!"/>
+            <Label text="Rename Origin Regex" labelFor="$renameOriginRegex"/>
+            <TextArea fx:id="renameOriginRegex" promptText="Origin Regex used to rename" VBox.vgrow="ALWAYS"/>
+            <Label text="Rename Replace Regex" labelFor="$renameReplaceRegex"/>
+            <TextArea fx:id="renameReplaceRegex" promptText="Replace Regex used to rename" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="renamePreviewBtn" text="Rename Preview!"/>
+            <Button fx:id="renameBtn" text="Execute Rename"/>
+        </VBox>
+        <ListView fx:id="renamedList" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <stylesheets>
+        <URL value="@../css/regex-rename.css"/>
+    </stylesheets>
+</VBox>

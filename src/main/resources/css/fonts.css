@@ -1,6 +1,7 @@
 @font-face {
-    font-family: "Fira Code SemiBold";
+    font-family: 'Fira Code SemiBold';
     font-style: normal;
     font-weight: normal;
-    src: url("../fonts/FiraCode-SemiBold.ttf") format('truetype');
+    font-size: 18px;
+    src: url('../fonts/FiraCode-SemiBold.ttf') format('truetype');
 }

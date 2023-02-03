@@ -1,15 +1,6 @@
-@import "../../css/fonts.css";
-@import "../../css/color.css";
-@import "../../css/default.css";
-
-.text-area {
-   -fx-text-fill: -fx-color-text;
-   -fx-prompt-text-fill: derive(-fx-color-text, -40%);
-   -fx-wrap-text: true;
-}
-
-.text-area .content {
-   -fx-background-color: derive(-fx-color-background, 5%);
+.root {
+    -fx-background-color: -default-color-background;
+    -fx-spacing: 10px;
 }
 
 .middle-region {
@@ -17,6 +8,6 @@
    -fx-spacing: 40px;
 }
 
-.combo-box .list-cell {
+.combo-box > .list-cell {
     -fx-alignment: center;
 }

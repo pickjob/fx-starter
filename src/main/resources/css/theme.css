@@ -1,0 +1,235 @@
+// Label
+.label {
+    -fx-text-fill: -default-color-text;
+}
+
+// TextField
+.text-field {
+    -fx-text-fill: -default-color-text;
+    -fx-prompt-text-fill: -default-color-text-prompt;
+    -fx-background-color: -default-color-background-control;
+}
+
+// PasswordField
+.password-field {
+}
+
+// TextArea
+.text-area {
+    -fx-pref-row-count: 3;
+    -fx-text-fill: -default-color-text;
+    -fx-prompt-text-fill: -default-color-text-prompt;
+    -fx-background-color: -default-color-background;
+    -fx-wrap-text: true
+}
+.text-area .scroll-pane .content {
+    -fx-background-color: -default-color-background-input;
+}
+
+// Button
+.button {
+    -fx-text-fill: -default-color-text-button;
+    -fx-background-color: -default-color-background-control;
+}
+
+// ToggleButton
+.toggle-button {
+    -fx-text-fill: -default-color-text-button;
+    -fx-background-color: -default-color-background-control;
+}
+
+// Hyperlink
+.hyperlink {
+    -fx-text-fill: -default-color-text-hyperlink;
+    -fx-underline: true;
+}
+.hyperlink:visited {
+    -fx-text-fill: -default-color-text-hyperlink-visited;
+    -fx-underline: true;
+}
+
+// RadioButton
+.radio-button {
+    -fx-text-fill: -default-color-text-button;
+}
+.radio-button .radio {
+    -fx-background-color: -default-color-background-box;
+}
+.radio-button:selected .radio .dot {
+    -fx-background-color: -default-color-background-mark;
+}
+
+// CheckBox
+.check-box {
+    -fx-text-fill: -default-color-text-button;
+}
+.check-box .box {
+    -fx-background-color: -default-color-background-box;
+}
+.check-box:selected .box .mark {
+    -fx-background-color: -default-color-background-mark;
+}
+
+// ProgressIndicator
+.progress-indicator {
+   -fx-progress-color: -default-color-progress;
+}
+
+// ProgressBar
+.progress-bar .track {
+    -fx-background-color: -default-color-background-control;
+}
+.progress-bar .bar {
+    -fx-background-color: -default-color-progress;
+}
+
+// Spinner
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: -default-color-background-control;
+}
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-background-color: -default-color-background-mark;
+}
+
+// Slider
+.slider .track {
+    -fx-background-color: -default-color-background-control;
+}
+.slider .thumb {
+    -fx-background-color: -default-color-progress;
+}
+
+// Pagination
+.pagination .left-arrow,
+.pagination .right-arrow {
+    -fx-background-color: -default-color-background-mark;
+}
+.pagination .number-button:selected {
+    -fx-background-color: -default-color-background-control-selected;
+}
+
+// ContextMenu
+.context-menu {
+     -fx-background-color: -default-color-background-control;
+}
+
+// Menu
+.menu {
+    -fx-background-color: -default-color-background-control;
+}
+
+// MenuItem
+.radio-menu-item {
+    -fx-text-fill: -default-color-button;
+}
+
+// ListCell
+.list-cell {
+    -fx-text-fill: -default-color-text;
+    -fx-background-color: -default-color-background-control;
+}
+
+// ListView
+.list-view {
+    -fx-background-color: -default-color-background-control;
+}
+
+// ChoiceBox
+.choice-box {
+    -fx-background-color: -default-color-background-control;
+}
+.choice-box .arrow {
+    -fx-background-color: -default-color-background-mark;
+}
+
+// ComboBox
+.combo-box,
+.combo-box .list-cell,
+.combo-box .arrow-button {
+    -fx-text-fill: -default-color-text-button;
+    -fx-background-color: -default-color-background-control;
+}
+.combo-box .arrow {
+    -fx-background-color: -default-color-button;
+}
+
+// DatePicker
+.date-picker .arrow-button {
+    -fx-text-fill: -default-color-text;
+    -fx-background-color: -default-color-background-control;
+}
+.date-picker .arrow {
+    -fx-background-color: -default-color-button;
+}
+.date-picker .date-cell {
+    -fx-text-fill: -default-color-text;
+    -fx-background-color: -default-color-background-control;
+    -fx-border-color: -default-color-background-control;
+}
+.date-picker .date-cell:hover {
+    -fx-background-color: -default-color-background-control-selected;
+    -fx-border-color: -default-color-background-control-selected;
+}
+.date-picker-popup,
+.date-picker-popup .month-year-pane {
+	-fx-background-color: -default-color-background-control;
+}
+.date-picker-popup .month-year-pane .label {
+	-fx-text-fill: -default-color-text;
+}
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+	-fx-background-color: -default-color-background-mark;
+}
+
+// ToolBar
+.tool-bar {
+    -fx-background-color: -default-color-background;
+}
+
+// MenuBar
+.menu-bar {
+    -fx-background-color: -default-color-background;
+}
+
+// VBox
+.v-box {
+    -fx-spacing: 5px;
+    -fx-alignment: center;
+}
+
+// HBOX
+.h-box {
+    -fx-spacing: 5px;
+    -fx-alignment: center;
+}
+
+// ScrollPane
+.scroll-pane {
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: true;
+}
+.scroll-pane .viewport,
+.scroll-pane .scroll-bar:vertical,
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: -default-color-background;
+}
+
+// TabPane
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: -default-color-background;
+}
+.tab-pane .tab {
+    -fx-background-color: -default-color-background-control;
+}
+.tab-pane .tab:selected {
+    -fx-background-color: -default-color-background-control-selected;
+}
+.tab-pane .tab .tab-label {
+    -fx-text-fill: -default-color-text;
+}
+.tab-pane .tab .tab-close-button {
+    -fx-background-color: -default-color-button;
+}

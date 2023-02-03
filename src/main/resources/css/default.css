@@ -1,9 +1,417 @@
 @import "fonts.css";
-@import "color.css";
+@import "colors.css";
 
-.root {
-    -fx-background-color: -fx-color-background;
-    -fx-font-family: "Fira Code SemiBold";
-    -fx-font-size: 18px;
-    -fx-spacing: 18px;
+* {
+    -fx-font: 18px 'Fira Code SemiBold';
+}
+
+* {
+    -default-color-text: -fx-color-deepOrange-900;
+    -default-color-text-prompt: derive(-default-color-text, -20%);
+    -default-color-text-button: -fx-color-purple-A200;
+    -default-color-text-hyperlink: -fx-color-lightBlue-300;
+    -default-color-text-hyperlink-visited: derive(-fx-color-lightBlue-300, -20%);
+
+
+    -default-color-button: -fx-color-red-900;
+
+    -default-color-progress: -fx-color-amber-900;
+
+    -default-color-background: #1e2030;
+    -default-color-background-control: derive(-default-color-background, 10%);
+    -default-color-background-control-selected: derive(-default-color-background-control, 40%);
+    -default-color-background-input: #222436;
+    -default-color-background-box: -default-color-background-control;
+    -default-color-background-mark: -default-color-button;
+
+    // node
+    //      -fx-opacity: 1;
+    //      -fx-rotate: 0;
+    //      -fx-scale-x: 1;
+    //      -fx-scale-y: 1;
+    //      -fx-scale-z: 1;
+    //      -fx-translate-x: 0;
+    //      -fx-translate-y: 0;
+    //      -fx-translate-z: 0;
+    // node:disabled
+    // node:focused
+    // node:focused:visible
+    // node:focus-within
+    // node:hover
+    // node:pressed
+
+    // parent
+
+    // region
+    //      -fx-background-color
+    //      -fx-background-radius: 0;
+    //      -fx-border-color
+    //      -fx-border-radius
+    //      -fx-border-width
+    //      -fx-border-style
+    //      -fx-padding
+
+    // pane ( -> region)
+
+    // hbox ( -> pane)
+    //      -fx-spacing: 0;
+    //      -fx-fill-height: true | false;
+    //      -fx-alignment: top-left | top-center | top-right | center-left | center | center-right bottom-left | bottom-center | bottom-right | baseline-left | baseline-center | baseline-right;
+
+    // vbox ( -> pane)
+    //      -fx-spacing: 0;
+    //      -fx-fill-width: true | false;
+    //      -fx-alignment: top-left | top-center | top-right | center-left | center | center-right bottom-left | bottom-center | bottom-right | baseline-left | baseline-center | baseline-right;
+
+    // border-pane ( -> pane)
+
+    // grid-pane ( -> pane)
+    //      -fx-hgap: 0;
+    //      -fx-vgap: 0;
+    //      -fx-alignment: top-left | top-center | top-right | center-left | center | center-right bottom-left | bottom-center | bottom-right | baseline-left | baseline-center | baseline-right;
+
+    // flow-pane ( -> pane)
+    //      -fx-hgap: 0;
+    //      -fx-hgap: 0;
+    //      -fx-alignment: top-left | top-center | top-right | center-left | center | center-right bottom-left | bottom-center | bottom-right | baseline-left | baseline-center | baseline-right;
+    //      -fx-column-halignment: left | center | right;
+    //      -fx-row-valignment: top | center | baseline | bottom;
+    //      -fx-orientation: horizontal | vertical;
+
+    // stack-pane ( -> pane)
+    //      -fx-alignment: top-left | top-center | top-right | center-left | center | center-right bottom-left | bottom-center | bottom-right | baseline-left | baseline-center | baseline-right;
+
+    // split-pane ( -> control)
+    //      -fx-orientation: horizontal | vertical;
+    // split-pane split-pane-divider ( -> stack-pane)
+    // split-pane split-pane-divider vertical-grabber ( -> stack-pane)
+    // split-pane split-pane-divider horizontal-grabber( -> stack-pane)
+    // split-pane:horizontal
+    // horizontal:vertical
+
+    // anchor-pane ( -> pane)
+
+    // tile-pane ( -> pane)
+    //      -fx-pref-rows: 5;
+    //      -fx-pref-columns: 5;
+    //      -fx-hgap: 0;
+    //      -fx-vgap: 0;
+    //      -fx-orientation: horizontal | vertical;
+
+    // dialog-pane ( -> pane)
+    // dialog-pane header-panel ( -> border-pane)
+    // dialog-pane content ( -> label)
+    // dialog-pane button-bar ( -> button-bar)
+
+    // scroll-pane
+    //      -fx-fit-to-width: true | false;
+    //      -fx-fit-to-height: true | false;
+    //      -fx-pannable: true | false;
+    //      -fx-hbar-policy: never | always | as-needed;
+    //      -fx-vbar-policy: never | always | as-needed;
+    // scroll-pane viewport ( -> stack-pane)
+    // scroll-pane scroll-bar:vertical ( -> scroll-bar)
+    // scroll-pane scroll-bar:horizontal ( -> scroll-bar)
+    // scroll-pane corner ( -> stack-pane)
+    // scroll-pane:pannable
+    // scroll-pane:fitToWidth
+    // scroll-pane:fitToHeight
+
+    // tab-pane ( -> control)
+    //      -fx-tab-min-width: 0;
+    //      -fx-tab-max-width
+    //      -fx-tab-min-height: 0;
+    //      -fx-tab-max-height
+    //      -fx-open-tab-animation: grow | none;
+    //      -fx-close-tab-animation: grow | none;
+    // tab-pane tab-header-area ( -> stack-pane)
+    // tab-pane tab-header-area headers-region  ( -> stack-pane)
+    // tab-pane tab-header-area tab-header-background ( -> stack-pane)
+    // tab-pane tab-header-area control-buttons-tab ( -> stack-pane)
+    // tab-pane tab-header-area tab-down-button ( -> pane)
+    // tab-pane tab-header-area arrow ( -> stack-pane)
+    // tab-pane tab-header-area tab ( -> tab)
+    // tab-pane tab-header-area tab tab-label ( -> label)
+    // tab-pane tab-header-area tab tab-close-button  ( -> stack-pane)
+    // tab-pane tab-content-area ( -> stack-pane)
+
+    // titled-pane
+    //      -fx-animated: true | false;
+    //      -fx-collapsible: true | false;
+    // titled-pane title ( -> hbox)
+    // titled-pane title text ( -> label)
+    // titled-pane title arrow-button ( -> stack-pane)
+    // titled-pane title arrow-button arrow ( -> stack-pane)
+    // titled-pane content ( -> stack-pane)
+
+    // control ( -> region)
+
+    // text ( -> shape)
+    //      -fx-tab-size: 8;
+    //      -fx-text-alignment: left | center | right | justify;
+    //      -fx-text-origin: baseline | top | bottom;
+    //      -fx-underline: true | false;
+
+    // labeled ( -> control)
+    //      -fx-underline: false;
+    //      -fx-content-display: top | right | bottom | left | center | right | graphic-only | text-only；
+    //      -fx-label-padding
+    //      -fx-text-fill
+    //      -fx-alignment: top-left | top-center | top-right | center-left | center | center-right bottom-left | bottom-center | bottom-right | baseline-left | baseline-center | baseline-right;
+    //      -fx-text-alignment: left | center | right | justify;
+    //      -fx-wrap-text: false;
+    //      -fx-text-overrun: center-ellipsis | center-word-ellipsis | clip | ellipsis | leading-ellipsis | leading-word-ellipsis | word-ellipsis;
+    //      -fx-ellipsis-string: '...'
+
+    // label ( -> labeled)
+
+    // text-input-control ( -> labeled)
+    //      -fx-text-fill
+    //      -fx-prompt-text-fill
+    //      -fx-highlight-fill
+    //      -fx-highlight-text-fill
+    // text-input-control:readonly
+
+    // text-field ( -> text-input-control)
+    //      -fx-alignment: top-left | top-center | top-right | center-left | center | center-right bottom-left | bottom-center | bottom-right | baseline-left | baseline-center | baseline-right;
+    //      -fx-pref-column-count: 12;
+
+    // password-field ( -> text-field)
+
+    // text-area ( -> text-input-control)
+    //      -fx-wrap-text: true;
+    //      -fx-pref-column-count: 40;
+    //      -fx-pref-row-count: 10;
+    // text-area scroll-pane ( -> scroll-pane)
+    // text-area scroll-pane content (-> region)
+
+    // button-base ( -> labeled)
+
+    // button ( -> button-base)
+
+    // toggle-button ( -> button-base)
+    // toggle-button:selected ( -> button-base)
+
+    // radio-button ( -> toggle-button)
+    // radio-button radio ( -> region)
+    // radio-button radio dot ( -> region)
+    // radio-button label ( -> label)
+
+    // hyperlink ( -> button-base)
+    // hyperlink label
+    // hyperlink:visited
+
+    // button-bar ( -> control)
+
+    // tool-bar ( -> control)
+    //      -fx-orientation: horizontal | vertical;
+    // tool-bar tool-bar-overflow-button ( -> stack-pane)
+    // tool-bar tool-bar-overflow-button arrow ( -> stack-pane)
+    // tool-bar:horizontal
+    // tool-bar:vertical
+
+    // check-box ( -> button-base)
+    // check-box box ( -> stack-pane)
+    // check-box box mark ( -> stack-pane)
+    // check-box:selected
+    // check-box:determinate
+    // check-box:indeterminate
+
+    // progress-indicator ( -> control)
+    //      -fx-progress-color
+    //      -fx-spin-enabled: true;
+    //      -fx-indeterminate-segment-count: 8;
+    // progress-indicator indicator ( -> stack-pane)
+    // progress-indicator progress ( -> stack-pane)
+    // progress-indicator percentage ( -> Text)
+    // progress-indicator tick ( -> stack-pane)
+    // progress-indicator:determinate
+    // progress-indicator:indetermindate
+
+    // progress-bar ( -> control)
+    //      -fx-indeterminate-bar-length: 60;
+    //      -fx-indeterminate-bar-escape: true;
+    //      -fx-indeterminate-bar-flip: true;
+    //      -fx-indeterminate-bar-animation-time: 2.0;
+    // progress-bar track ( -> StackPane)
+    // progress-bar track bar ( -> Region)
+    // progress-bar:determinate
+    // progress-bar:indetermindate
+
+    // spinner ( -> control)
+    //      -fx-initial-delay: 300ms;
+    //      -fx-repeat-delay: 60ms;
+    // spinner text-field ( -> text-field)
+    // spinner increment-arrow-button —  ( -> stack-pane)
+    // spinner increment-arrow — ( -> region)
+    // spinner decrement-arrow-button — ( -> stack-pane)
+    // spinner decrement-arrow — ( -> region)
+
+    // slider ( -> control)
+    //      -fx-orientation: horizontal | vertical;
+    //      -fx-show-tick-labels: false;
+    //      -fx-show-tick-marks: false;
+    //      -fx-major-tick-unit: 25;
+    //      -fx-minor-tick-count: 3;
+    //      -fx-show-tick-labels: false;
+    //      -fx-snap-to-ticks: false;
+    //      -fx-block-increment: 10;
+    // slider axis ( NumberAxis)
+    // slider track ( -> Region)
+    // slider thumb ( -> Region)
+    // slider:horizontal
+    // slider:vertical
+
+    // pagination ( -> control)
+    //      -fx-max-page-indicator-count: 10;
+    //      -fx-arrows-visible: true;
+    //      -fx-tooltip-visible: false;
+    //      -fx-page-information-visible: true;
+    //      -fx-page-information-alignment: top | bottom | left | right;
+    // pagination page ( -> stack-pane)
+    // pagination pagination-control ( -> stack-pane)
+    // pagination pagination-control leftArrowButton ( -> button)
+    // pagination pagination-control leftArrowButton leftArrow ( -> stack-pane)
+    // pagination pagination-control rightArrowButton ( -> button)
+    // pagination pagination-control rightArrowButton rightArrow ( -> stack-pane)
+    // pagination pagination-control bullet-button ( -> toogle-button)
+    // pagination pagination-control number-button ( -> toogle-button)
+    // pagination pagination-control page-information ( -> label)
+
+    // separator ( -> control)
+    //      -fx-orientation: horizontal | vertical;
+    //      -fx-halignment: left | center | right;
+    //      -fx-valignment: top | center | baseline | bottom;
+    // separator line ( -> region)
+    // separator:horizontal
+    // separator:vertical
+
+    // menu-item
+
+    // radio-menu-item
+    // radio-menu-item:selected
+
+    // check-menu-item
+    // check-menu-item:selected
+
+    // separator-menu-item
+
+    // context-menu ( -> region)
+
+    // menu ( -> control)
+    // menu:showing
+
+    // menu-bar
+    // menu-bar menu ( -> menu)
+
+    // cell ( -> labeled)
+    //      -fx-cell-size: 24;
+    // cell text ( -> text)
+    // cell:empty
+    // cell:filled
+    // cell:selected
+
+    // indexed-cell ( -> cell)
+    // indexed-cell:even ( -> cell)
+    // indexed-cell:single ( -> cell)
+
+    // list-cell ( -> indexed-cell)
+
+    // tree-cell ( -> indexed-cell)
+    //      -fx-indent: 10;
+    // tree-cell:expanded
+    // tree-cell:collapsed
+
+    // list-view ( -> control)
+    //      -fx-orientation: horizontal | vertical;
+    // list-view virtual-flow ( -> virtual-flow)
+    // list-view virtual-flow clipped-container ( -> region)
+    // list-view virtual-flow clipped-container sheet ( -> group)
+    // list-view virtual-flow clipped-container sheet cell.indexed-cell.list-cell ( -> list-cell)
+    // list-view virtual-flow clipped-container scroll-bar ( -> scroll-bar)
+    // list-view:horizontal
+    // list-view:vertical
+
+    // tree-view ( -> control)
+    //      -fx-fixed-cell-size
+
+    // choice-box ( -> control)
+    // choice-box open-button ( -> region)
+    // choice-box open-button arrow ( -> region)
+
+    // combo-box-base ( -> control)
+    // combo-box-base arrow-button  ( -> stack-pane)
+    // combo-box-base arrow-button arrow ( -> stack-pane)
+    // combo-box-base:editable
+
+    // combo-box ( -> combo-box-base)
+    // combo-box list-cell ( -> list-cell)
+    // combo-box text-input ( -> text-field)
+    // combo-box combo-box-popup ( -> .root.popup)
+    // combo-box combo-box-popup list-view ( -> list-view)
+    // combo-box combo-box-popup list-view list-cell ( -> list-cell)
+
+    // date-cell ( -> cell)
+
+    // date-picker ( -> combo-box-base)
+    // date-picker date-picker-display-node ( -> text-field)
+
+    // tooltip
+    //      -fx-text-alignment: left | center | right | justify;
+    //      -fx-text-overrun: center-ellipsis | center-word-ellipsis | clip | ellipsis | leading-ellipsis | leading-word-ellipsis | word-ellipsis;
+    //      -fx-wrap-text: false;
+    //      -fx-content-display: top | right | bottom | left | center | right | graphic-only | text-only;
+    //      -fx-show-delay: 1000ms;
+    //      -fx-show-duration: 5000ms;
+    //      -fx-hide-delay: 200ms;
+    // tooltip label ( -> label)
+    // tooltip page-corner ( -> stack-pane)
+
+    // accordion ( -> control)
+    // accordion first-titled-pane ( -> titled-pane)
+
+    // scroll-bar ( -> control)
+    //      -fx-orientation: horizontal | vertical;
+    //      -fx-block-increment: 10;
+    //      -fx-unit-increment: 1;
+    // scroll-bar:vertical;
+    // scroll-bar:horizontal;
+
+    // shape
+    //      -fx-fill
+    //      -fx-smooth: true | false;
+    //      -fx-stroke
+    //      -fx-stroke-type: inside | outside | centered;
+    //      -fx-stroke-dash-array
+    //      -fx-stroke-dash-offset: 0;
+    //      -fx-stroke-line-cap: square | butt | round;
+    //      -fx-stroke-line-join: miter | bevel | round;
+    //      -fx-stroke-miter-limit: 10;
+    //      -fx-stroke-width: 1;
+
+    // arc ( -> shape)
+
+    // circle ( -> shape)
+
+    // cubic-curve ( -> shape)
+
+    // ellipse ( -> shape)
+
+    // line ( -> shape)
+    //      -fx-fill
+    //      -fx-stroke
+
+    // path ( -> shape)
+    //      -fx-fill
+    //      -fx-stroke
+
+    // polygon ( -> shape)
+
+    // quad-curve ( -> shape)
+
+    // rectangle ( -> shape)
+    //      -fx-arc-height: 0;
+    //      -fx-arc-width: 0;
+
+    // svg-path ( -> shape)
 }
