@@ -23,7 +23,7 @@ class JavaFxApplication: Application() {
         val transformTab = Tab("Transform", transformContent)
 
         val regexRenameContent: Parent = FXMLLoader.load(javaClass.getResource("/javafx/fxml/2.RegexRename.fxml"))
-        val regexRenameTab = Tab("Transform", regexRenameContent)
+        val regexRenameTab = Tab("RegexRename", regexRenameContent)
 
         stage.scene = createJavaFxScene(
             regexRenameTab,

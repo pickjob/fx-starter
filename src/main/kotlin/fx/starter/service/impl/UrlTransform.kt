@@ -3,15 +3,15 @@ package fx.starter.service.impl
 import fx.starter.service.Transform
 import java.net.URLDecoder
 import java.net.URLEncoder
-import java.nio.charset.Charset
+import kotlin.text.Charsets
 
 
 class UrlTransform: Transform {
     override fun transfrom(src: String): String {
-        return URLEncoder.encode(src, Charset.defaultCharset())
+        return URLEncoder.encode(src, Charsets.UTF_8)
     }
 
     override fun reverse(dest: String): String {
-        return URLDecoder.decode(dest, Charset.defaultCharset())
+        return URLDecoder.decode(dest, Charsets.UTF_8)
     }
 }
